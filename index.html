@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8a3dba1210.js" crossorigin="anonymous"></script>
+    <title>Login form css</title>
+</head>
+<body>
+
+    
+    <section>
+
+        <div class="left">
+
+            <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+
+            <div class="form">
+                <form onclick="outline()" action="">
+                    <div class="title">
+                        <h2> <img src="images/log-in.svg" alt=""> Faça se login</h2>
+                        <p>Entre com suas informações de cadastro</p>
+                    </div>
+                    <div > 
+                        <label for="email">E-mail</label>
+                        <div class="inputemail">
+                            <img id="mail" src="images/mail-focus.svg" alt="mail">
+                            <img src="images/mail.svg" alt="mail">
+
+                             <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                            
+                        </div>
+                       
+                    </div>
+                    
+                    <div> 
+                        <label for="senha">senha</label>
+                        <div class="inputsenha">
+                            <img id="lock" src="images/lock-focus.svg" alt="lock-focus">
+                            <img src="images/lock.svg" alt="lock">
+
+                            <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                            <i id="blindEye" class="far fa-eye-slash"></i>
+                            <img class="eye" src="images/eye.svg" alt="eye">
+                        </div>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="checkbox" id="checkbox"> 
+                        <label for="checkbox">Lembre-me</label>
+                        <p id="Forget">  Esqueci minha senha</p>
+                    </a> </div>
+                    <button>Entrar</button>
+                    <p>Não tem uma conta ? <span class="create" >Registre-se</span></p>
+                </form>
+            </div>
+
+            <div class="forgetForm">
+                <form  action="">
+                    <div class="title">
+                        <h2> <img src="images/log-in.svg" alt=""> Crie sua Conta</h2>
+                        <p>Entre com suas informações de cadastro</p>
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <div class="emailCreate">
+                            <img src="images/mail.svg" alt="mail">
+                            <input type="email" name="email" placeholder="Digite seu e-mail">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="senha">senha</label>
+                        <div  class="senhaCreate">
+                            <img src="images/lock.svg" alt="lock">
+                            <input type="password" name="password"  placeholder="Digite sua senha">
+                            <i class="far fa-eye-slash"></i>
+                            <img class="eye" src="images/eye.svg" alt="eye">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="senha">Confirma senha</label>
+                        <div  class="Confirmsenha">
+                            <img class="lock" src="images/lock.svg" alt="lock">
+                            <input type="password" name="password" placeholder="Confirm sua senha">
+                            <img class="eye" src="images/eye.svg" alt="eye">
+                        </div>
+                    </div>
+
+                    <div class="check">
+                        <p id="Forget" >Esqueci minha senha</p>
+                     </div>
+                    <button>Criar Conta</button>
+                    <p>Tem uma conta ? <span class="entrar">Entar</span></p>
+                </form>
+            </div>
+
+            <div class="Forgetpassword">
+                <form action="">
+                    <h2>Esqueceu a Senha ?</h2>
+                    <p>Entre com Seu Email Para Recuperar sua conta</p>
+
+
+                    <div>
+                        <label for="emailrecover">E-mail</label>
+                        <div class="emailPassword">
+                            <img src="images/mail.svg" alt="mail">
+                            <div class="inputEmail"><input type="email" name="emailrecover" id="emailrecover"></div>
+                            <p id ="FLogin">Fazer Login</p>
+                    </div>
+                    </div>
+                        <button type="submit">Confirma</button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="right">
+        </div>
+
+
+    </section>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+    
+<script src="main.js"></script>
+
+<script>
+
+var slideLeft = {
+    distance: '150%',
+    origin: 'left',
+    reset: true,
+    easing: 'ease-in' 
+};
+
+ScrollReveal().reveal('.left', slideLeft);
+
+var slideBottom = {
+    distance: '150%',
+    origin: 'bottom',
+    reset: true,
+    
+};
+
+ScrollReveal().reveal('.right', slideBottom);
+
+</script>
+
+</body>
+</html>
