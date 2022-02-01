@@ -375,7 +375,7 @@ section .forgetForm form .emailCreate {
 }
 
 section .forgetForm form .emailCreate input{
-    width: 100%;
+    width: 80%;
     padding: 0.8rem;
     padding-left: 2rem;
     background: transparent;
@@ -386,18 +386,13 @@ section .forgetForm form .emailCreate input{
     margin-bottom: 1rem;
 }
 
-section .forgetForm form .emailCreate img {
-    position:absolute;
-    top: 10px;
-    left: 10px;
-}
 
 section .forgetForm form .senhaCreate{
     position: relative;
 }
 
 section .forgetForm form .senhaCreate input{
-    width: 100%;
+    width: 80%;
     padding: 0.8rem;
     padding-left: 2rem;
     background: transparent;
@@ -418,6 +413,12 @@ section .forgetForm form .senhaCreate > img:nth-child(4) {
     position: absolute;
     top: 10px;
     left: 320px;
+}
+
+section .forgetForm form .emailCreate img {
+    position:absolute;
+    top: 10px;
+    left: 10px;
 }
 
 
@@ -606,22 +607,91 @@ section .left .Forgetpassword form .emailPassword input {
 
 
 section .forgetForm {
-    width: 87%;
+    text-align: left;
+    width: 100%;
     height: 82vh;
-    margin-left: 2.1rem;
+    margin-left: 0;
 }
 
+
 section .left .Forgetpassword{
-      width: 87%;
+    width: 100%;
     height: 70vh;
-    margin-left: 2.1rem;
-   
+    margin-left: 0rem; 
+}
+
+section .left .Forgetpassword form p {
+    padding-right: 1.5rem;
+    text-align: center;
+}
+
+section .left .Forgetpassword form .emailPassword img {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+section .left .Forgetpassword form{
+    text-align: left;
+}
+
+section .left .Forgetpassword form .emailPassword input{
+    width: 100%;
 }
 
     section .left .form {
-        width: 87%;
+        width: 100%;
         height: 70vh;
-        margin-left: 2.1rem;
+        margin-left: 0rem;
+    }
+
+    section .left form {
+        text-align: center;
+        padding-left: 1.5rem;
+    }
+
+    section .forgetForm form .senhaCreate > img:nth-child(1) {
+        position: absolute;
+        top: 10px;
+        left: 35px;
+    }
+    section .forgetForm form .senhaCreate > img:nth-child(4) {
+        position: absolute;
+        top: 10px;
+        left: 245px;
+    }
+    
+    section .forgetForm form .emailCreate img {
+        position:absolute;
+        top: 10px;
+        left: 35px;
+    }
+    
+    
+    section .forgetForm form .senhaCreate i {
+        position:absolute;
+        top: 40px;
+        left: 245px;
+        opacity: 0;
+    }
+        
+    section .forgetForm form .Confirmsenha img:nth-child(1){
+        top: 10px;
+        left: 35px;
+    }
+    
+    section .forgetForm form .Confirmsenha img:nth-child(3) {
+        top: 10px;
+        left: 245px;
+        position: absolute;
+    }
+
+    section .form form .check label {
+        font-size: 0.8rem;
+    }
+    
+    section .form form .check p{  
+        font-size: 0.8rem;
     }
 
     section {
