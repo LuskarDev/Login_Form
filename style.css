@@ -573,14 +573,18 @@ section .left .Forgetpassword form .emailPassword input {
 
     section .form form .inputsenha .eye {
         position: absolute;
-        top: 10px;
-        left: 220px;
+        top: 12px;
+        left: 212px;
         cursor: pointer;
     }
     
 
     section .form form .inputemail img{
         top: 19px;
+    }
+
+    section .form form .inputemail input {
+        height: 65%;
     }
 }
 
@@ -653,36 +657,36 @@ section .left .Forgetpassword form .emailPassword input{
     section .forgetForm form .senhaCreate > img:nth-child(1) {
         position: absolute;
         top: 10px;
-        left: 35px;
+        left: 40px;
     }
     section .forgetForm form .senhaCreate > img:nth-child(4) {
         position: absolute;
         top: 10px;
-        left: 245px;
+        left: 235px;
     }
     
     section .forgetForm form .emailCreate img {
         position:absolute;
         top: 10px;
-        left: 35px;
+        left: 40px;
     }
     
     
     section .forgetForm form .senhaCreate i {
         position:absolute;
         top: 40px;
-        left: 245px;
+        left: 235px;
         opacity: 0;
     }
         
     section .forgetForm form .Confirmsenha img:nth-child(1){
         top: 10px;
-        left: 35px;
+        left: 40px;
     }
     
     section .forgetForm form .Confirmsenha img:nth-child(3) {
         top: 10px;
-        left: 245px;
+        left: 235px;
         position: absolute;
     }
 
