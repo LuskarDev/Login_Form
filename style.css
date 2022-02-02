@@ -119,7 +119,6 @@ section .form form p span:hover{
 
 section .form form .inputemail{
     width: 100%;
-    height: 7vh;
     display: flex;
     color: var(--text-title);
     border: .1rem solid grey;
@@ -186,7 +185,10 @@ section form .title p {
 section .form form .inputsenha{
     flex-direction: column;
     width: 100%;
+    height: 3.5vh;
     position: relative;
+    border: 1px solid var(--text-title);
+    border-radius: 4px;
 }
 
 
@@ -237,6 +239,7 @@ section .form form .inputsenha input{
     background: transparent;
     color: var(--text-title);
     border-radius: 4px;
+    border: none;
     outline: none;
     margin-bottom: 1rem;
     position: relative;
@@ -407,25 +410,25 @@ section .forgetForm form .senhaCreate input{
 section .forgetForm form .senhaCreate > img:nth-child(1) {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 41px;
 }
 section .forgetForm form .senhaCreate > img:nth-child(4) {
     position: absolute;
     top: 10px;
-    left: 320px;
+    left: 290px;
 }
 
 section .forgetForm form .emailCreate img {
     position:absolute;
     top: 10px;
-    left: 10px;
+    left: 41px;
 }
 
 
 section .forgetForm form .senhaCreate i {
     position:absolute;
     top: 10px;
-    left: 320px;
+    left: 290px;
     opacity: 0;
 }
 
@@ -455,12 +458,12 @@ section .forgetForm form .Confirmsenha .lock {
 
 section .forgetForm form .Confirmsenha img:nth-child(1){
     top: 10px;
-    left: 10px;
+    left: 41px;
 }
 
 section .forgetForm form .Confirmsenha img:nth-child(3) {
     top: 10px;
-    left: 320px;
+    left: 290px;
     position: absolute;
 }
 
@@ -577,7 +580,6 @@ section .left .Forgetpassword form .emailPassword input {
         left: 212px;
         cursor: pointer;
     }
-    
 
     section .form form .inputemail img{
         top: 19px;
@@ -608,6 +610,10 @@ section .left .Forgetpassword form .emailPassword input {
 }
 
 @media(max-width: 671px){
+
+    section .form form .inputemail img{
+        top: 11px;
+    }
 
 
 section .forgetForm {
@@ -662,20 +668,21 @@ section .left .Forgetpassword form .emailPassword input{
     section .forgetForm form .senhaCreate > img:nth-child(4) {
         position: absolute;
         top: 10px;
-        left: 235px;
+        left: 290px;
     }
     
     section .forgetForm form .emailCreate img {
         position:absolute;
         top: 10px;
         left: 40px;
+        
     }
     
     
     section .forgetForm form .senhaCreate i {
         position:absolute;
         top: 40px;
-        left: 235px;
+        left: 290px;
         opacity: 0;
     }
         
@@ -686,7 +693,7 @@ section .left .Forgetpassword form .emailPassword input{
     
     section .forgetForm form .Confirmsenha img:nth-child(3) {
         top: 10px;
-        left: 235px;
+        left: 290px;
         position: absolute;
     }
 
@@ -704,5 +711,130 @@ section .left .Forgetpassword form .emailPassword input{
 
     section .right {
         display:none;
+    }
+}
+
+@media(max-width: 376px){
+    section .forgetForm form .senhaCreate > img:nth-child(4) {
+        position: absolute;
+        top: 10px;
+        left: 290px;
+    }
+
+     
+    section .forgetForm form .Confirmsenha img:nth-child(3) {
+        top: 10px;
+        left: 290px;
+        position: absolute;
+    }
+}
+
+
+@media(max-width: 373px){
+    section .forgetForm form .senhaCreate > img:nth-child(4) {
+        position: absolute;
+        top: 10px;
+        left: 280px;
+    }
+
+     
+    section .forgetForm form .Confirmsenha img:nth-child(3) {
+        top: 10px;
+        left: 280px;
+        position: absolute;
+    }
+}
+
+@media(max-width: 360px){
+    section .forgetForm form .senhaCreate > img:nth-child(4) {
+        position: absolute;
+        top: 10px;
+        left: 270px;
+    }
+
+     
+    section .forgetForm form .Confirmsenha img:nth-child(3) {
+        top: 10px;
+        left: 270px;
+        position: absolute;
+    }
+}
+
+@media(max-width: 350px){
+    section .forgetForm form .senhaCreate > img:nth-child(4) {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+     
+    section .forgetForm form .Confirmsenha img:nth-child(3) {
+        top: 10px;
+        right: 10px;
+        position: absolute;
+    }
+}
+
+
+@media(max-width: 347px){
+    section .forgetForm form .senhaCreate > img:nth-child(4) {
+        position: absolute;
+        top: 10px;
+        left: 260px;
+    }
+
+     
+    section .forgetForm form .Confirmsenha img:nth-child(3) {
+        top: 10px;
+        left: 260px;
+        position: absolute;
+    }
+}
+
+
+@media(max-width: 343px){
+    section .forgetForm form .senhaCreate > img:nth-child(4) {
+        position: absolute;
+        top: 10px;
+        left: 250px;
+    }
+
+     
+    section .forgetForm form .Confirmsenha img:nth-child(3) {
+        top: 10px;
+        left: 250px;
+        position: absolute;
+    }
+}
+
+
+@media(max-width: 343px){
+    section .forgetForm form .senhaCreate > img:nth-child(4) {
+        position: absolute;
+        top: 10px;
+        left: 240px;
+    }
+
+     
+    section .forgetForm form .Confirmsenha img:nth-child(3) {
+        top: 10px;
+        left: 240px;
+        position: absolute;
+    }
+}
+
+
+@media(max-width: 317px){
+    section .forgetForm form .senhaCreate > img:nth-child(4) {
+        position: absolute;
+        top: 10px;
+        left: 230px;
+    }
+
+     
+    section .forgetForm form .Confirmsenha img:nth-child(3) {
+        top: 10px;
+        left: 230px;
+        position: absolute;
     }
 }
