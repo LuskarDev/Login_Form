@@ -631,7 +631,6 @@ section .form form .inputsenha{
     flex-direction: column;
     width: 100%;
     position: relative;
-    border: 1px solid var(--text-title);
     border-radius: 4px;
 }
 
@@ -754,7 +753,6 @@ section .form form .inputsenha{
     flex-direction: column;
     width: 100%;
     position: relative;
-    border: 1px solid var(--text-title);
     border-radius: 4px;
 }
 }
