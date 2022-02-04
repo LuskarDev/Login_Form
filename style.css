@@ -243,7 +243,7 @@ section .form form .inputsenha input{
     outline: none;
     margin-bottom: 1rem;
     position: relative;
-    border: 1px solid var(--text-title);
+    border: 1px solid var(--text-title)
 }
 
 section .form form .inputsenha input:focus{
@@ -571,13 +571,6 @@ section .left .Forgetpassword form .emailPassword input {
         grid-template-columns: 60% 40%;
     }
 
-    section .form form .inputsenha{
-        flex-direction: column;
-        width: 100%;
-        position: relative;
-        border-radius: 4px;
-    }
-
     section .form form .inputsenha .eye {
         position: absolute;
         top: 12px;
@@ -604,13 +597,6 @@ section .left .Forgetpassword form .emailPassword input {
         grid-area: "left left" "right right";
     }
 
-    section .form form .inputsenha{
-        flex-direction: column;
-        width: 100%;
-        position: relative;
-        border-radius: 4px;
-    }
-
     section .left {
         grid-area: 'left';
     }
@@ -625,15 +611,6 @@ section .left .Forgetpassword form .emailPassword input {
     section .form form .inputemail img{
         top: 11px;
     }
-
-
-section .form form .inputsenha{
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    border-radius: 4px;
-}
-
 
 section .forgetForm {
     text-align: left;
@@ -747,14 +724,6 @@ section .left .Forgetpassword form .emailPassword input{
         position: absolute;
     }
 
-
-
-section .form form .inputsenha{
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    border-radius: 4px;
-}
 }
 
 
@@ -1441,12 +1410,6 @@ section .left .Forgetpassword form .emailPassword input {
         grid-template-columns: 60% 40%;
     }
 
-    section .form form .inputsenha{
-        flex-direction: column;
-        width: 100%;
-        position: relative;
-        border-radius: 4px;
-    }
 
     section .form form .inputsenha .eye {
         position: absolute;
@@ -1474,13 +1437,6 @@ section .left .Forgetpassword form .emailPassword input {
         grid-area: "left left" "right right";
     }
 
-    section .form form .inputsenha{
-        flex-direction: column;
-        width: 100%;
-        position: relative;
-        border-radius: 4px;
-    }
-
     section .left {
         grid-area: 'left';
     }
@@ -1495,15 +1451,6 @@ section .left .Forgetpassword form .emailPassword input {
     section .form form .inputemail img{
         top: 11px;
     }
-
-
-section .form form .inputsenha{
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    border-radius: 4px;
-}
-
 
 section .forgetForm {
     text-align: left;
@@ -1617,14 +1564,6 @@ section .left .Forgetpassword form .emailPassword input{
         position: absolute;
     }
 
-
-
-section .form form .inputsenha{
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    border-radius: 4px;
-}
 }
 
 
