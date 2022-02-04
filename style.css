@@ -142,7 +142,6 @@ section .form form .inputemail img:nth-child(4){
 
 section .form form .inputemail input{
     width: 100%;
-    height: 7vh;
     padding: 0.8rem;
     padding-left: 2rem;
     background: transparent;
@@ -151,6 +150,7 @@ section .form form .inputemail input{
     border-radius: 4px;
     outline: none!important;
 }
+
 
 section .form form .inputemail input:focus{
     border: 1px solid var(--primary-color)
@@ -185,11 +185,11 @@ section form .title p {
 section .form form .inputsenha{
     flex-direction: column;
     width: 100%;
-    height: 6.6vh;
     position: relative;
-    border: 1px solid var(--text-title);
     border-radius: 4px;
 }
+
+
 
 
 
@@ -207,7 +207,7 @@ section .form form .inputsenha img:nth-child(4).ativo{
 section .form form .inputsenha > i {
     position: absolute;
     top: 12px;
-    left: 210px;
+    right: 10px;
     font-size: 1.2rem;
     opacity: 0;
 }
@@ -243,6 +243,7 @@ section .form form .inputsenha input{
     outline: none;
     margin-bottom: 1rem;
     position: relative;
+    border: 1px solid var(--text-title);
 }
 
 section .form form .inputsenha input:focus{
@@ -254,10 +255,6 @@ section .form form .inputsenha img {
     position: absolute;
     left: 10px;
     top: 10px;
-}
-
-section .form form .inputsenha input:focus{
-    border: 1px solid var(--primary-color);
 }
 
 section form .title h2 {
@@ -577,9 +574,7 @@ section .left .Forgetpassword form .emailPassword input {
     section .form form .inputsenha{
         flex-direction: column;
         width: 100%;
-        height: 3.5vh;
         position: relative;
-        border: 1px solid var(--text-title);
         border-radius: 4px;
     }
 
@@ -612,9 +607,7 @@ section .left .Forgetpassword form .emailPassword input {
     section .form form .inputsenha{
         flex-direction: column;
         width: 100%;
-        height: 3.8vh;
         position: relative;
-        border: 1px solid var(--text-title);
         border-radius: 4px;
     }
 
@@ -637,7 +630,6 @@ section .left .Forgetpassword form .emailPassword input {
 section .form form .inputsenha{
     flex-direction: column;
     width: 100%;
-    height: 3.8vh;
     position: relative;
     border: 1px solid var(--text-title);
     border-radius: 4px;
@@ -761,7 +753,6 @@ section .left .Forgetpassword form .emailPassword input{
 section .form form .inputsenha{
     flex-direction: column;
     width: 100%;
-    height: 3.5vh;
     position: relative;
     border: 1px solid var(--text-title);
     border-radius: 4px;
@@ -1456,7 +1447,6 @@ section .left .Forgetpassword form .emailPassword input {
     section .form form .inputsenha{
         flex-direction: column;
         width: 100%;
-        height: 8vh;
         position: relative;
         border: 1px solid var(--text-title);
         border-radius: 4px;
@@ -1491,9 +1481,7 @@ section .left .Forgetpassword form .emailPassword input {
     section .form form .inputsenha{
         flex-direction: column;
         width: 100%;
-        height: 4vh;
         position: relative;
-        border: 1px solid var(--text-title);
         border-radius: 4px;
     }
 
@@ -1516,9 +1504,7 @@ section .left .Forgetpassword form .emailPassword input {
 section .form form .inputsenha{
     flex-direction: column;
     width: 100%;
-    height: 7vh;
     position: relative;
-    border: 1px solid var(--text-title);
     border-radius: 4px;
 }
 
@@ -1640,9 +1626,7 @@ section .left .Forgetpassword form .emailPassword input{
 section .form form .inputsenha{
     flex-direction: column;
     width: 100%;
-    height: 7vh;
     position: relative;
-    border: 1px solid var(--text-title);
     border-radius: 4px;
 }
 }
@@ -1756,14 +1740,7 @@ section .form form .inputsenha{
         position: absolute;
     }
 
-    section .form form .inputsenha{
-        flex-direction: column;
-        width: 100%;
-        height: 3.5vh;
-        position: relative;
-        border: 1px solid var(--text-title);
-        border-radius: 4px;
-    }
+
 }
 
 @media(max-width: 307px){
@@ -1794,16 +1771,6 @@ section .form form .inputsenha{
         left: 200px;
         position: absolute;
     }
-
-
-    section .form form .inputsenha{
-    flex-direction: column;
-    width: 100%;
-    height: 3.5vh;
-    position: relative;
-    border: 1px solid var(--text-title);
-    border-radius: 4px;
-}
 }
 
 @media(max-width: 288px){
@@ -1872,12 +1839,5 @@ section .form form .inputsenha{
         font-size: 0.7rem;
     }
 
-    section .form form .inputsenha{
-        flex-direction: column;
-        width: 100%;
-        height: 3.8vh;
-        position: relative;
-        border: 1px solid var(--text-title);
-        border-radius: 4px;
-    }
+
 } 
