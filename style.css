@@ -637,7 +637,7 @@ section .left .Forgetpassword form .emailPassword input {
 section .form form .inputsenha{
     flex-direction: column;
     width: 100%;
-    height: 7vh;
+    height: 3.8vh;
     position: relative;
     border: 1px solid var(--text-title);
     border-radius: 4px;
