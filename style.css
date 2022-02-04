@@ -1776,7 +1776,7 @@ section .form form .inputsenha{
      
     section .forgetForm form .Confirmsenha img:nth-child(3) {
         top: 10px;
-        left: 220px;
+        left: 200px;
         position: absolute;
     }
 }
@@ -1785,13 +1785,13 @@ section .form form .inputsenha{
     section .forgetForm form .senhaCreate > img:nth-child(4) {
         position: absolute;
         top: 10px;
-        left: 210px;
+        left: 200px;
     }
 
      
     section .forgetForm form .Confirmsenha img:nth-child(3) {
         top: 10px;
-        left: 210px;
+        left: 200px;
         position: absolute;
     }
 }
