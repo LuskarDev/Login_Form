@@ -213,7 +213,7 @@ section .form form .inputsenha #lock.ativo{
 section .form form .inputsenha > i {
     position: absolute;
     top: 12px;
-    left: 180px;
+    left: 170px;
     margin-right: 10px;
     font-size: 1.2rem;
     opacity: 0;
