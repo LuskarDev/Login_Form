@@ -176,7 +176,7 @@ section .form form .inputemail #mail.ative{
        
 section form .title {
     text-align: center;
-    padding-left: 29px;
+    padding-left: 10px;
 }
 
 
@@ -643,11 +643,6 @@ section .form form .inputsenha > i {
     section .form form .inputemail img{
         top: 11px;
     }
-
-    
-
-
-
 
 section .forgetForm {
     text-align: left;
