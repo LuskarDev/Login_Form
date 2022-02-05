@@ -130,7 +130,13 @@ section .form form .inputemail img{
     width: 20px;
     margin-left: 0.5rem;
     position: absolute;
-    top: 13px;
+    top: 10px!important;
+}
+
+section .form form .inputemail img.focus{
+    position: absolute;
+    top: 10px;
+    z-index: 1;
 }
 
 section .form form .inputemail img:nth-child(4){
@@ -161,10 +167,16 @@ section .form form .inputemail img:nth-child(4){
 }
 
 
-section .form form .inputemail img:nth-child(4).ative{
+section .form form .inputemail #mail.ative{
     opacity: 1;
     visibility: visible;
     z-index: 1;
+}
+
+       
+section form .title {
+    text-align: center;
+    padding-left: 29px;
 }
 
 
@@ -188,12 +200,17 @@ section .form form .inputsenha{
     border-radius: 4px;
 }
 
-section .form form .inputsenha img:nth-child(4){
+section .form form .inputsenha #lock{
+    position: absolute;
+    top: 10px;
+    left: 10px;
     opacity: 0;
     visibility: hidden;
+    z-index: 1;
 }
 
-section .form form .inputsenha img:nth-child(4).ativo{
+
+section .form form .inputsenha #lock.ativo{
     opacity: 1;
     visibility: visible;
 }
@@ -593,6 +610,25 @@ section .left .Forgetpassword form .emailPassword input {
         grid-area: "left left" "right right";
     }
 
+        
+
+    section .form form .inputsenha .eye {
+        position: absolute;
+        top: 12px;
+        left: 220px!important;
+        cursor: pointer;
+    }
+
+
+section .form form .inputsenha > i {
+    position: absolute;
+    top: 12px;
+    left: 219px;
+    font-size: 1.2rem;
+    opacity: 0;
+}
+
+
     section .left {
         grid-area: 'left';
     }
@@ -608,6 +644,11 @@ section .left .Forgetpassword form .emailPassword input {
         top: 11px;
     }
 
+    
+
+
+
+
 section .forgetForm {
     text-align: left;
     width: 100%;
@@ -621,6 +662,8 @@ section .left .Forgetpassword{
     height: 70vh;
     margin-left: 0rem; 
 }
+
+
 
 section .left .Forgetpassword form p {
     padding-right: 1.5rem;
