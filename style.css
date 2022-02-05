@@ -189,10 +189,6 @@ section .form form .inputsenha{
     border-radius: 4px;
 }
 
-
-
-
-
 section .form form .inputsenha img:nth-child(4){
     opacity: 0;
     visibility: hidden;
@@ -207,7 +203,7 @@ section .form form .inputsenha img:nth-child(4).ativo{
 section .form form .inputsenha > i {
     position: absolute;
     top: 12px;
-    right: 10px;
+    left: 210px;
     font-size: 1.2rem;
     opacity: 0;
 }
@@ -223,7 +219,7 @@ section .form form .inputsenha #blindEye.activo{
 section .form form .inputsenha .eye {
     position: absolute;
     top: 12px;
-    left: 212px;
+    left: 218px;
     cursor: pointer;
 }
 
@@ -1448,10 +1444,6 @@ section .left .Forgetpassword form .emailPassword input {
 
 @media(max-width: 671px){
 
-    section .form form .inputemail img{
-        top: 11px;
-    }
-
 section .forgetForm {
     text-align: left;
     width: 100%;
@@ -1549,67 +1541,4 @@ section .left .Forgetpassword form .emailPassword input{
         display:none;
     }
 }
-
-@media(max-width: 376px){
-    section .forgetForm form .senhaCreate > img:nth-child(4) {
-        position: absolute;
-        top: 10px;
-        left: 290px;
-    }
-
-     
-    section .forgetForm form .Confirmsenha img:nth-child(3) {
-        top: 10px;
-        left: 290px;
-        position: absolute;
-    }
-
 }
-
-
-@media(max-width: 373px){
-    section .forgetForm form .senhaCreate > img:nth-child(4) {
-        position: absolute;
-        top: 10px;
-        left: 280px;
-    }
-
-     
-    section .forgetForm form .Confirmsenha img:nth-child(3) {
-        top: 10px;
-        left: 280px;
-        position: absolute;
-    }
-}
-
-@media(max-width: 360px){
-    section .forgetForm form .senhaCreate > img:nth-child(4) {
-        position: absolute;
-        top: 10px;
-        left: 270px;
-    }
-
-     
-    section .forgetForm form .Confirmsenha img:nth-child(3) {
-        top: 10px;
-        left: 270px;
-        position: absolute;
-    }
-}
-
-@media(max-width: 350px){
-    section .forgetForm form .senhaCreate > img:nth-child(4) {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-
-     
-    section .forgetForm form .Confirmsenha img:nth-child(3) {
-        top: 10px;
-        right: 10px;
-        position: absolute;
-    }
-}
-
-
