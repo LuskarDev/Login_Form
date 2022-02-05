@@ -203,7 +203,7 @@ section .form form .inputsenha img:nth-child(4).ativo{
 section .form form .inputsenha > i {
     position: absolute;
     top: 12px;
-    left: 210px;
+    left: 208px;
     font-size: 1.2rem;
     opacity: 0;
 }
@@ -220,7 +220,7 @@ section .form form .inputsenha .eye {
     position: absolute;
    position: absolute;
     top: 12px;
-    left: 210px;
+    left: 208px;
     cursor: pointer;
 }
 
