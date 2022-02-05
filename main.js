@@ -24,6 +24,8 @@ const Forgetpassword = document.querySelector('.Forgetpassword')
 
 const Flogin = document.getElementById('FLogin')
 
+const focus = document.querySelector('.focus')
+
 Forget[0].addEventListener('click', () => {
     Forgetpassword.classList.add('ShowFormPassword');
     form.classList.remove('showForm');
@@ -53,6 +55,7 @@ Flogin.addEventListener('click', () => {
 
 
 
+
 function outline(){
 
 email.onclick = () => {
@@ -60,18 +63,21 @@ email.onclick = () => {
 }
 
 senha.onclick = () => {
-    lock.classList.toggle('ativo')
+    lock.classList.toggle("ativo");
+    senha.classList.remove("active");
+    
 }
 
 eye.onclick = () => {
     blindEye.classList.add("activo")
-    eye.classList.add("active")
+    eye.classList.toggle("removeEye")
     senha.setAttribute('type', 'text');
     senha.classList.add("active");
+
 }
 
 blindEye.onclick = () => {
-    eye.classList.remove("active")
+    eye.classList.toggle("removeEye")
     blindEye.classList.remove("activo")  
     senha.setAttribute('type', 'password');
     senha.classList.remove("active");
