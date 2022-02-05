@@ -609,6 +609,22 @@ section .left .Forgetpassword form .emailPassword input {
         top: 11px;
     }
 
+    section .form form .inputsenha > i {
+        position: absolute;
+        top: 12px;
+        left: 195px;
+        font-size: 1.2rem;
+        opacity: 0;
+    }
+    
+    section .form form .inputsenha .eye {
+        position: absolute;
+        top: 12px;
+        left: 195px;
+        cursor: pointer;
+    }
+    
+
 section .forgetForm {
     text-align: left;
     width: 100%;
