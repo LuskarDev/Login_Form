@@ -230,7 +230,7 @@ section .form form .inputsenha #blindEye.activo{
 section .form form .inputsenha .eye {
     position: absolute;
     top: 12px;
-    left: 180px!important;
+    left: 170px!important;
     cursor: pointer;
 }
 
