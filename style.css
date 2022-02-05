@@ -737,7 +737,7 @@ section .left .Forgetpassword form .emailPassword input{
 }
 
 
-@media (max-width: 315px) {
+@media (max-width: 300px) {
     section .form form .inputsenha > i {
         position: absolute;
         top: 12px;
