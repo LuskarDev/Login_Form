@@ -202,7 +202,7 @@ section .form form .inputsenha img:nth-child(4).ativo{
 section .form form .inputsenha > i {
     position: absolute;
     top: 12px;
-    left: 195px;
+    left: 180px;
     margin-right: 10px;
     font-size: 1.2rem;
     opacity: 0;
@@ -220,7 +220,7 @@ section .form form .inputsenha .eye {
     position: absolute;
    position: absolute;
     top: 12px;
-    left: 195px;
+    left: 180px;
     cursor: pointer;
 }
 
@@ -609,21 +609,6 @@ section .left .Forgetpassword form .emailPassword input {
         top: 11px;
     }
 
-    section .form form .inputsenha > i {
-        position: absolute;
-        top: 12px;
-        left: 195px;
-        font-size: 1.2rem;
-        opacity: 0;
-    }
-    
-    section .form form .inputsenha .eye {
-        position: absolute;
-        top: 12px;
-        left: 190px;
-        cursor: pointer;
-    }
-
 section .forgetForm {
     text-align: left;
     width: 100%;
@@ -722,23 +707,7 @@ section .left .Forgetpassword form .emailPassword input{
 }
 
 @media(max-width: 376px){
-
-    section .form form .inputsenha > i {
-        position: absolute;
-        top: 12px;
-        left: 195px;
-        font-size: 1.2rem;
-        opacity: 0;
-    }
     
-    section .form form .inputsenha .eye {
-        position: absolute;
-        top: 12px;
-        left: 190px;
-        cursor: pointer;
-    }
-    
-
     section .forgetForm form .senhaCreate > img:nth-child(4) {
         position: absolute;
         top: 10px;
