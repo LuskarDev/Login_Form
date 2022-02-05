@@ -218,9 +218,8 @@ section .form form .inputsenha #blindEye.activo{
 
 section .form form .inputsenha .eye {
     position: absolute;
-   position: absolute;
     top: 12px;
-    left: 180px;
+    left: 180px!important;
     cursor: pointer;
 }
 
@@ -714,23 +713,6 @@ section .form form .inputsenha .eye {
     left: 180px;
     cursor: pointer;
 }
-}
-
-@media(max-width: 376px){
-    
-    section .forgetForm form .senhaCreate > img:nth-child(4) {
-        position: absolute;
-        top: 10px;
-        left: 290px;
-    }
-
-     
-    section .forgetForm form .Confirmsenha img:nth-child(3) {
-        top: 10px;
-        left: 290px;
-        position: absolute;
-    }
-
 }
 
 
