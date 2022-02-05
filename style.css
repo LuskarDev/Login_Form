@@ -737,27 +737,19 @@ section .left .Forgetpassword form .emailPassword input{
 }
 
 
-@media (min-width: 315px) {
+@media (min-width: 255px) {
     section .form form .inputsenha > i {
         position: absolute;
         top: 12px;
-        left: 180px!important;
+        left: 160px!important;
         font-size: 1.2rem;
         opacity: 0;
-    }
-    
-    section .form form .inputsenha #blindEye.activo{
-        opacity: 1;
-        visibility: visible;
-        z-index: 1;
-        cursor: pointer;
-    
     }
     
     section .form form .inputsenha .eye {
         position: absolute;
         top: 12px;
-        left: 180px;
+        left: 160px;
         cursor: pointer;
     }
 }
