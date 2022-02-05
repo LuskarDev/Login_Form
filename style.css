@@ -749,7 +749,8 @@ section .left .Forgetpassword form .emailPassword input{
     section .form form .inputsenha .eye {
         position: absolute;
         top: 12px;
-        left: 160px;
+        left: 160px!important;
+
         cursor: pointer;
     }
 }
