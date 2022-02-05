@@ -204,6 +204,7 @@ section .form form .inputsenha > i {
     position: absolute;
     top: 12px;
     left: 195px;
+    margin-right: 10px;
     font-size: 1.2rem;
     opacity: 0;
 }
@@ -221,6 +222,8 @@ section .form form .inputsenha .eye {
    position: absolute;
     top: 12px;
     left: 195px;
+    margin-right: 10px;
+
     cursor: pointer;
 }
 
