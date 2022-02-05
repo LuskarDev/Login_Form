@@ -17,7 +17,6 @@
 
 section {
     overflow: hidden;
-
     width: 100%;
     height: 100vh;
     display: grid;
@@ -687,7 +686,7 @@ section .left .Forgetpassword form .emailPassword input{
     
     section .forgetForm form .Confirmsenha img:nth-child(3) {
         top: 10px;
-        left: 290px;
+        left: 270px;
         position: absolute;
     }
 
