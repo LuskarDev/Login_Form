@@ -1,85 +1,41 @@
-var senha = document.getElementById('password')
-
-var eye = document.querySelector('.eye')
-
-var blindEye = document.getElementById('blindEye')
-
-const email = document.getElementById('email')
-
-const lock = document.getElementById('lock')
-
-const mail = document.getElementById('mail')
-
-const form = document.querySelector('.form')
-
-const entrar = document.querySelector('.entrar')
-
-const CriarConta = document.querySelector('.forgetForm')
-
-const ButtonCreate = document.querySelector('.create')
-
-const Forget = document.querySelectorAll('#Forget')
-
-const Forgetpassword = document.querySelector('.Forgetpassword')
-
-const Flogin = document.getElementById('FLogin')
-
-const focus = document.querySelector('.focus')
-
-Forget[0].addEventListener('click', () => {
-    Forgetpassword.classList.add('ShowFormPassword');
-    form.classList.remove('showForm');
-    CriarConta.classList.remove('showForget')
+window.addEventListener("scroll", ()=> {
+    var head = document.getElementById("head")
+    head.classList.toggle("styck", window.scrollY > 5)
 })
 
-Forget[1].addEventListener('click', () => {
-    Forgetpassword.classList.add('ShowFormPassword');
-    form.classList.remove('showForm');
-    CriarConta.classList.remove('showForget')
-})
+function ShowMore(){
+    let buttonText = document.querySelector("#showMore p")
+    let ImgButton = document.querySelector("#showMore img")
+    let ul = document.getElementById("lista-ul")
 
-ButtonCreate.addEventListener('click', () => {
-    CriarConta.classList.add('showForget')
-    form.classList.add('showForm');
-})
+    ul.classList.toggle("show");
+    if(ul.className === "show"){
+        buttonText.innerText = " Fechar";
+        ImgButton.style.rotate = "-180deg"
+    }else {
+        buttonText.innerText = "Ver + 1";
+            ImgButton.style.rotate = "0deg"
 
-entrar.addEventListener('click', () => {
-    form.classList.remove('showForm');
-    CriarConta.classList.remove('showForget')
-    Forgetpassword.classList.remove('ShowFormPassword');
-})
-
-Flogin.addEventListener('click', () => {
-    Forgetpassword.classList.remove('ShowFormPassword');
-})
-
-
-
-
-function outline(){
-
-email.onclick = () => {
-    mail.classList.toggle("ative");
+    }
 }
 
-senha.onclick = () => {
-    lock.classList.toggle("ativo");
-    senha.classList.remove("active");
-    
+function Share(){
+    const title = window.document.title;
+    const url = window.document.location.href;
+    const text = "Venha Da Um Olhada em Uma Arvoré Social";
+    let copiePop = document.querySelector(".copieConfirm");
+
+    if(navigator.share){
+        navigator.share({
+            title: `${title}`,
+            text: `${text}`,
+            url: `${url}` 
+        }).then(() => {
+            copiePop.classList.add("active");
+            setInterval(() => {
+                copiePop.classList.remove("active")
+            }, 2000)
+        }).catch(console.error);
+    }
 }
 
-eye.onclick = () => {
-    blindEye.classList.add("activo")
-    eye.classList.toggle("removeEye")
-    senha.setAttribute('type', 'text');
-    senha.classList.add("active");
-
-}
-
-blindEye.onclick = () => {
-    eye.classList.toggle("removeEye")
-    blindEye.classList.remove("activo")  
-    senha.setAttribute('type', 'password');
-    senha.classList.remove("active");
-}
-}

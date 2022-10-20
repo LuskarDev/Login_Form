@@ -1,155 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/8a3dba1210.js" crossorigin="anonymous"></script>
-    <title>Login form css</title>
+    <link rel="shortcut icon" href="img/arvores.png" type="image/x-icon">
+    <title>Social Tree</title>
 </head>
 <body>
+    <div class="copieConfirm">
+        <h2>Url Copiado!!</h2>
+    </div>
 
-    
-    <section>
-
-        <div class="left">
-
-            <div class="logo"><img src="images/logo.svg" alt="logo"></div>
-
-            <div class="form">
-                <form onclick="outline()" action="">
-                    <div class="title">
-                        <h2> <img src="images/log-in.svg" alt=""> Faça se login</h2>
-                        <p>Entre com suas informações de cadastro</p>
-                    </div>
-                    <div > 
-                        <label for="email">E-mail</label>
-                        <div class="inputemail">
-                            <img id="mail" src="images/mail-focus.svg" alt="mail">
-                            <img src="images/mail.svg" alt="mail">
-                             <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
-                            
-                        </div>   
-                    </div>
-                    
-                    <div> 
-                        <label for="senha">senha</label>
-                        <div class="inputsenha">
-                            <img id="lock" src="images/lock-focus.svg" alt="lock-focus">
-                            <img src="images/lock.svg" alt="lock">
-
-                            <input type="password" name="password" id="password" placeholder="Digite sua senha">
-                            <i id="blindEye" class="far fa-eye-slash"></i>
-                            <img class="eye" src="images/eye.svg" alt="eye">
-                        </div>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" name="checkbox" id="checkbox"> 
-                        <label for="checkbox">Lembre-me</label>
-                        <p id="Forget">  Esqueci minha senha</p>
-                    </a> </div>
-                    <button>Entrar</button>
-                    <p>Não tem uma conta ? <span class="create" >Registre-se</span></p>
-                </form>
-            </div>
-
-            <div class="forgetForm">
-                <form action="">
-                    <div class="title">
-                        <h2> <img src="images/log-in.svg" alt=""> Crie sua Conta</h2>
-                        <p>Entre com suas informações de cadastro</p>
-                    </div>
-                    <div>
-                        <label for="email">E-mail</label>
-                        <div class="emailCreate">
-                            <img src="images/mail.svg"  alt="mail">
-                            <img src="images/mail-focus.svg" alt="mail">
-                            <input type="email" name="email" placeholder="Digite seu e-mail">
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label for="senha">senha</label>
-                        <div  class="senhaCreate">
-                            <img src="images/lock.svg" alt="lock">
-                            <input type="password" name="password"  placeholder="Digite sua senha">
-                            <i class="far fa-eye-slash"></i>
-                            <img src="images/eye.svg" alt="eye">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label for="senha">Confirma senha</label>
-                        <div  class="Confirmsenha">
-                            <img class="lock" src="images/lock.svg" alt="lock">
-                            <input type="password" name="password" placeholder="Confirm sua senha">
-                            <img src="images/eye.svg" alt="eye">
-                        </div>
-                    </div>
-
-                    <div class="check">
-                        <p id="Forget" >Esqueci minha senha</p>
-                     </div>
-                    <button>Criar Conta</button>
-                    <p>Tem uma conta ? <span class="entrar">Entar</span></p>
-                </form>
-            </div>
-
-            <div class="Forgetpassword">
-                <form action="">
-                    <h2>Esqueceu a Senha ?</h2>
-                    <p>Entre com Seu Email Para Recuperar sua conta</p>
+    <header id="head">
+        <figure>
+            <img src="img/logov4-white-front.png" alt="">
+        </figure>
+ 
+        <div class="shared-icon" onclick="Share()">
+            <img src="img/share-icon.svg" alt="share">
+        </div>
+    </header>
 
 
-                    <div>
-                        <label for="emailrecover">E-mail</label>
-                        <div class="emailPassword">
-                            <img src="images/mail.svg" alt="mail">
-                            <div class="inputEmail"><input type="email" name="emailrecover" id="emailrecover"></div>
-                            <p id ="FLogin">Fazer Login</p>
-                    </div>
-                    </div>
-                        <button type="submit">Confirma</button>
-                </form>
-            </div>
+    <main class="socialTree">
+        <figure
+        ><img src="img/perfil.jpeg" alt="imagem de perfil">
+        </figure>
+        <h1>Lucas Oliveira</h1>
+        <h2>Desenvolvedor Web</h2>
+        <ul id="lista-ul">
+            <li>
+                
+                <a href=""><i class="fab fa-facebook"></i> Facebook</a>  
+            </li>
+            <li>
+                
+                <a target="_blank" href=" https://api.whatsapp.com/send?phone=971447401 "><i class="fab fa-whatsapp"></i> Whatsapp</a>  
+            </li>
+            <li>
+                <a target="_blank" href="">
+                <i class="fab fa-instagram"></i>
+                 Instagram </a> 
+            </li>
+            <li>
+                <a target="_blank" href=" https://www.linkedin.com/in/lucas-oliveira-369a4022a/ ">
+                    <i class="fab fa-linkedin"></i> 
+                    LinkId
+                </a> 
+            </li>
+
+            <li>
+                <a target="_blank" href="https://github.com/LuskarDev">
+                    <i class="fa-brands fa-github"></i>
+                    Github
+                </a> 
+            </li>
             
-        </div>
-        <div class="right">
-        </div>
+        </ul>
+        <button id="showMore" onclick="ShowMore()">
+            <p>Ver + 1 
+            </p>
+             <img src="img/down-arrow (cópia).png" >
+        </button>
+    </main>
 
-
-    </section>
-
-<script src="https://unpkg.com/scrollreveal"></script>
-    
-<script src="main.js"></script>
-
-<script>
-
-var slideLeft = {
-    distance: '150%',
-    origin: 'left',
-    reset: true,
-    easing: 'ease-in' 
-};
-
-ScrollReveal().reveal('.left', slideLeft);
-
-var slideBottom = {
-    distance: '150%',
-    origin: 'bottom',
-    reset: true,
-    
-};
-
-ScrollReveal().reveal('.right', slideBottom);
-
-</script>
-
+    <script src="https://kit.fontawesome.com/51bc08e9f3.js" crossorigin="anonymous"></script>    
+    <script src="main.js"></script>
 </body>
 </html>
