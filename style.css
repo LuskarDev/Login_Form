@@ -1,305 +1,504 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-    --body-bg-color: #FAF7FD;
-    --purple: #BB99DD;
-  }
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+    --font-poppins:'Poppins', sans-serif;
+    --font-Roboto:'Roboto', sans-serif;
+}
 
-  #head{
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 70px;
-    padding: 20px 0;
-    background-color: transparent;
-  }
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--text-base) !important;
+}
 
-  #head.styck {
-    background-color: black;
-  }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+  border: 1px solid green;
+  -webkit-text-fill-color: green;
+  box-shadow: 0 0 0px 1000px var(--form-background) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
 
-  #head figure img {
-    width: 80px;
-  }
-
-  .copieConfirm {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    font-family: "Roboto";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    background-color: rgba(26, 25, 25, 0.788);
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .copieConfirm.active{
-    opacity: 1;
-    visibility: visible;
-    transition: all .35s ease;
-  }
-
-  .copieConfirm h2 {
-    font-size: 2rem;
-    color: white;
-  }
-
-  body {
-    position: relative;
-      background: var(--body-bg-color);
-      height: 105vh;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "Roboto",sans-serif;
-      background-color: #309797;
-      background: linear-gradient(125deg, rgba(92, 90, 90, 0.767) 45%, rgba(90, 85, 85, 0.521) 55%);
-    background-repeat: no-repeat;
-    scroll-behavior: smooth;
-  }
-
-  .shared-icon{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    height: 35px;
-    width: 40px;
-    background-color: white;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .shared-icon::after{
-    position: absolute;
-    content: " ";
-    width: 20px;
-    height: 20px;
-    transform: rotate(135deg);
-    left: -32px;
-    background-color: white;
-    z-index: 0;
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .shared-icon::before{
-    position: absolute;
-    left: -125px;
-    content: "Compartilhar";
-    font-family: "Roboto";
-    font-size: 1rem;
-    background-color: white;
-    padding: 10px 5px;
-    border-radius: 4px;
-    z-index: 1;
-    opacity: 0;
-    visibility: hidden;
-    transition: transform 1s ease;
-    transform: translateX(20px);
-  }
-
-  .shared-icon:hover::after{
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .shared-icon:hover::before{
-    transform: translateX(0px);
-    opacity: 1;
-    visibility: visible;
-    transition: transform .45s ease;
-  }
-
-  .shared-icon:hover{
-    background-color: rgba(25, 77, 219, 0.89);
-    transition: all 1s ease;
-    border: 1px solid white;
-  }
-
-    .shared-icon img{
-      width: 120px;
+@keyframes opacityDelay {
+    0% {
+        opacity: 1;
     }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
 
+@keyframes shake {
+    0%{
+        transform: translateX(2px);
+    }
+    50%{
+        transform: translateX(-2px);
+    }
+    100%{
+        transform: translateX(2px);
+    }
+}
 
-a {      
-    text-decoration: none;
-    color: black;
+body{
+    position: relative;
+}
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-family: var(--font-Roboto);
+    z-index: 1;
+}
+
+.bg .close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 300px;
+    top: 250px;
+    background-color: crimson;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.bg .close .lineclose {
+    height: 25px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: white;
+    transform: rotate(50deg);
+}
+
+.bg .close .lineclose:nth-child(2){
+    transform: rotate(-50deg);
+}
+
+.bg .boxAlert {
+    border: 1px solid var(--primary-color);
+    padding: 25px;
+    border-radius: 8px;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--background);
+}
+
+.bg .boxAlert p,
+.bg .boxAlert h2{
+    font-size: 1.5rem;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+.left header {
+    position: absolute;
+    top: 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+/* button forms*/
+
+.left #CreateAccount button,
+.left .ForgetPass button,
+.left .form button {
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 16px 0;
+    cursor: pointer;
+    font-family: var(--font-Roboto);
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.left #CreateAccount button:hover,
+.left .ForgetPass button:hover,
+.left .form button:hover{
+    background-color: #ffc532e3;
+    color: white;
+    transition: background-color .35s ease;
+}
+
+/* border input */
+.left .input-border {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    border: 1px solid var(--text-title);
+    border-radius: 4px;
+    position: relative;
+}
+
+.left .input-border small{
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    font-family: var(--font-poppins);
 
 }
 
-  .socialTree {
-      text-align: center;
-      margin-top: 2rem;
-  }
+.left .input-border small.show{
+    color: crimson;
+    opacity: 1;
+}
 
-  .socialTree figure img{
-        width: 100px;
-        height: 140px;
-        border-radius:20px;
-        margin-top: 2rem;
-        background-color: black;
-        border: 2px solid white;
-  }
+.left .input-border.Sucess{
+    border: 1px solid var(--primary-color);
+    transition: border .35s ease;
+}
 
-  .socialTree  > h1 {
-      font-family: "Roboto";
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin: 1rem 0;
-      color: white;
-  }
+.left .input-border.error{
+    border: 1px solid crimson;
+    transition: border .35s ease;
+    animation: shake .25s ease;
+}
 
-  .socialTree > h2 {
-    margin: 20px 0;
-    font-size: .9rem;
-    color: white;
-    letter-spacing: 3px;
-  }
-
-  .socialTree button{
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-    font-family: "Roboto";
+.left .input-border input{
     background-color: transparent;
-    padding: 15px;
-    border: 1px solid black;
-    cursor: pointer;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--text-base);
+    padding-left: 5px;
+}
+
+/* Form login */
+
+.left .form {
+    text-align: center;
+    background-color: var(--form-background);
+    padding: 20px;
     border-radius: 8px;
-  }
+    box-shadow: 0px 0px 5px 0px rgba(41, 39, 39, 0.664);
+    transition: all 1s ease;
+    display: block;
+}
 
-  .socialTree button p{
+/* remove o formulario principal */
+.left .form.RemoveActive{
+    transform: translateX(-700px);
+    animation: opacityDelay 1s ease;
+    transition: all 1s ease;
+}
+
+.left .form form > p {
+    font-family: var(--font-poppins);
+    color: var(--primary-color);
+}
+
+.left .form form > p span {
     font-weight: 700;
-    font-family: "Roboto";
+}
+
+.left .form form > p span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.left .form .title{
+    display: flex;
+    flex-direction: column;
+    color: var(--text-base);
+    align-items: center;
+}
+
+.left .form .title h2{
+    font-family: var(--font-poppins);
     font-size: .8rem;
-    letter-spacing: 2px;
-    color: black;
-  }
+    margin: 10px 0;
+}
 
-  .socialTree button:hover p{
-    
-    transform: translateY(50px);
-    transition: transform 1s ease;
-   }
+.left .form .title .content-title {
+    display: flex;
+    font-family: var(--font-Roboto);
+}
 
-  .socialTree button img{
+.left .form .title .content-title h1 {
+    margin: 5px 0;
+    margin-left: 5px;
+}
+
+.left .form form .inputsenha,
+.left .form form .inputemail {
+    color: var(--text-base);
+    font-family: var(--font-poppins);
+    margin: 25px 0;
+    text-align: left;
+} 
+
+.left .form form .inputemail{
+    margin-top: 0;
+}
+
+.left .form form .inputsenha label,
+.left .form form .inputemail label {
+    font-size: 1rem;
+}
+
+.left #CreateAccount .GroupPutSenhac .input-border img:nth-child(2),
+.left #CreateAccount .GroupPutSenha .input-border img:nth-child(2),
+.left #CreateAccount .GroupPutEmail .input-border img:nth-child(2),
+.left .ForgetPass .forget .input-border img:nth-child(2),
+.left .form form .inputsenha .input-border img:nth-child(2),
+.left .form form .inputemail .input-border img:nth-child(2){
+    display: none;
+}
+
+.left #CreateAccount .GroupPutSenhac .input-border img:nth-child(2).ShowLockC,
+.left #CreateAccount .GroupPutSenha .input-border img:nth-child(2).ShowLockF,
+.left #CreateAccount .GroupPutEmail .input-border img:nth-child(2).ShowEmailC,
+.left .ForgetPass .forget .input-border img:nth-child(2).ShowFEmail,
+.left .form form .inputsenha .input-border img:nth-child(2).ShowLock,
+.left .form form .inputemail .input-border img:nth-child(2).ShowEmail{
+    display: block;
+}
+
+.left #CreateAccount .GroupPutSenha .line,
+.left #CreateAccount .GroupPutSenhac .line,
+.left .form form .inputsenha .input-border .line{
     position: absolute;
-    top: -50px;
-    width: 40px;
-  }
+    right: 12px;
+    top: 12px;
+    width: 10px;
+    height: 0px;
+    transition: height .55s ease;
+    border-radius: 50%;
+    background-color: var(--form-background);
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}
 
-  .socialTree button:hover img{
-    top: 5px;
-    left: 130px;
-    transition: top 1s ease
-  }
+.left #CreateAccount .GroupPutSenha .line.CloseEye,
+.left #CreateAccount .GroupPutSenhac .line.CloseEye,
+.left .form form .inputsenha .input-border .line.CloseEye{
+    height: 10px;
+    transition: height .35s ease;
+    opacity: 1;
+    visibility: visible;
+}
+    
+/* check  */
 
-  .socialTree ul {
-    max-height: 200px;
-    overflow-y: hidden;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-    transition: max-height 1s ease;
-  }
+.left .form .check-Forget {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
 
-  .socialTree ul.show{
-    max-height: 350px;
-    transition: max-height 1s ease;
-  }
+.left .form .check-Forget p span{
+    font-family: var(--font-Roboto);
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
 
-  .socialTree ul li {
+.left .form .check-Forget p:hover span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.left .form .check-Forget .input-check{
+    color: var(--text-base);
+    font-size: 1.1rem;
+    margin: 10px 0px;
+}
+
+/* input check */
+
+.left .form .check-Forget .input-check .checkmark{
+    position: absolute;
+    top: 13px;
+    left: 0px;
+    width: 13px;
+    height: 13px;
+    background-color: #ffc632;
+    opacity: 0;
+    border-radius: 3px;
+    visibility: hidden;
+}
+
+.left .form .check-Forget .input-check .checkmark::after{
+    position: absolute;
+    width: 15px;
+    left: -2px;
+    top: -3px;
+    height: 15px;
+    content: " ";
+    color: white;
+    background-image: url(/images/check.svg);
+    opacity: 0;
+}
+
+.left .form .check-Forget .input-check input:checked ~ .checkmark{
+    opacity: 1;
+    visibility: visible;
+}
+
+.left .form .check-Forget .input-check input:checked ~ .checkmark::after{
+    opacity: 1;
+}
+
+/* FORM FORGET  */
+
+.left .ForgetPass{
+    position: absolute;
+    height: 250px;
+    background-color: var(--form-background);    
+    border-radius: 4px;
+    padding: 20px;
+    color: var(--text-base);
+    transform: translateX(700px);
+    margin: 0px 20px;
+    opacity: 0;
+    visibility: hidden;
+    flex-direction: column;
+    box-shadow: 0px 0px 2px 0px var(--text-base);
+    transition: all 1s ease;
+}
+
+/* mostra o formulario de recuperação de email*/
+.left .ForgetPass.ShowForget{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+    transition: transform 1s ease;
+}
+
+.left #CreateAccount p,
+.left .ForgetPass p{
+    font-size: .8rem;
+    font-family: var(--font-poppins);
+    color: #ffc632;
+    margin-top: 10px ;
+    text-align: center;
+}
+
+.left #CreateAccount p:hover,
+.left .ForgetPass p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.left .ForgetPass h2{
+    margin: 20px 0;
+    font-family: var(--font-poppins);
+}
+
+.left .ForgetPass .forget {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: var(--font-poppins);
+    padding: 10px 0;
+}
+
+/* CREATE ACCOUNT */
+
+.left #CreateAccount {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    transform: translateX(-800px);
+    justify-content: center;
+    box-shadow: 0px 0px 2px 0px var(--text-base);
+    padding: 5px;
+    color: var(--text-base);
+    border-radius: 4px;
+    font-family: var(--font-poppins);
+    background-color: var(--form-background);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+/* Mostra o Form de Criação de Conta */
+.left #CreateAccount.ShowCreate{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+    transition: transform 1s ease;
+}
+
+.left #CreateAccount h2{
+    font-family: var(--font-Roboto);
+    font-weight: 700;
+    margin: 5px 0;
+    text-align: center!important;
+}
+
+.left #CreateAccount .GroupNames{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    box-shadow: 0px 0px 4px 0px grey;
-    border-radius: 7px;
-      width: 300px;
-      list-style: none;
-      padding: 20px 0;
-      margin-bottom: 0.8rem;
-      cursor: pointer;
-      background-color:rgba(255, 255, 255, 0.747);
-      font-family: "Roboto";
-    letter-spacing: 2px;
-  }
+}
 
-  .socialTree ul li::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0%;
-    height: 100%;
-    border-radius: 7px;
-  }
-
-  .socialTree ul li:hover:before{
-    background-color: #1a1919;
+.left #CreateAccount .GroupNames .GroupPut{
     width: 100%;
-    transition: all 1s ease;
-  }
+}
 
-  .socialTree ul li:hover {
-      transition: all .25s ease;
-      transform: translateY(-10%);
-      animation: shake 1s infinite;
-  }
+.left #CreateAccount .GroupPutSenhac,
+.left #CreateAccount .GroupPutSenha,
+.left #CreateAccount .GroupPutEmail,
+.left #CreateAccount .GroupPut{
+    margin: 20px 10px;
+}
 
-  .socialTree ul li a{
-    color: black;
-    position: absolute;
-    left: 100px;
-    top: 10px;
-    z-index: 1;
-  }
 
-  .socialTree ul li:hover a{
-  color: white;
-  }
-  
+/* LADO DIREITO */
 
-  @keyframes shake {
-        0%{
-            transform: rotateX(0deg);
-        }
-        25%{
-                transform: rotateX(10deg);
-        }
-        50%{
-            transform: rotateY(12deg);
-
-        }
-        100%{
-            transform: rotateX(10deg);
-        }
-  }
-
-  @media (prefers-reduced-motion){
-    body, html {
-      scroll-behavior: initial;
-    }
-  }
+.right {
+    background-image: url(/Login\ Form\ CSS/images/side-image-2x.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
