@@ -11,7 +11,7 @@
 <br>
 
 <p align="center">
-   <img alt="Login & Create" title="Login & Create" src="https://github.com/LuskarDev/Login_Form/blob/main/images/login-form.png" width="720px" />
+   <img alt="Login & Create" title="Login & Create" src="https://github.com/LuskarDev/Login_Form/blob/main/capa-form.png" width="720px" />
 </p>
 
 ## Tecnologias
