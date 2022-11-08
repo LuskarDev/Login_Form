@@ -1,72 +1,185 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/arvores.png" type="image/x-icon">
-    <title>Social Tree</title>
+    <link rel="stylesheet" href="mediaquery.css">
+    <script src="https://kit.fontawesome.com/8a3dba1210.js" crossorigin="anonymous"></script>
+    <title>Login form css</title>
 </head>
 <body>
-    <div class="copieConfirm">
-        <h2>Url Copiado!!</h2>
-    </div>
-
-    <header id="head">
-        <figure>
-            <img src="img/logov4-white-front.png" alt="">
-        </figure>
- 
-        <div class="shared-icon" onclick="Share()">
-            <img src="img/share-icon.svg" alt="share">
+    <div class="bg">
+        <div class="close">
+            <div class="lineclose"></div>
+            <div class="lineclose"></div>
         </div>
-    </header>
+        <div class="boxAlert">
+            <h2>Esse Site Não envia Formulario para Nenhum banco de Dados</h2>
+            <p>Site apenas Demostrativo</p>
+        </div>
+    </div>
+    
+    <section>
+       
+        <div class="left">
+            <header>
+                <a href="/index.html">
+                <img src="images/logo.svg" alt="logo camp in">
+                </a>
+            </header>
+
+            <div class="form" id="Prform">
+                <div class="title">
+                    <div class="content-title">
+                        <img src="images/log-in.svg" alt="uma seta apontando para direita em direção um retangulo que se assemelha a uma porta"> 
+                        <h1>Fazer Login</h1>
+                    </div>
+                    <h2>Entre com suas informações de cadastro</h2>
+                </div>
+                <form action="" method="post" id="LoginForm">
+                    <div class="inputemail">
+                        <label for="email">E-mail</label>
+                        <div class="input-border">
+                            <img src="images/mail.svg" alt="email um icone de uma carta, retangulo com uma meio triangulo no meio">
+                            <img src="images/mail-focus.svg" alt="email um icone de uma carta, retangulo com uma meio triangulo no meio na color amarela">
+                            <input type="email" name="email" id="email">
+                            <small>Preencha</small>
+                        </div>
+                    </div>
+                    <div class="inputsenha">
+                        <label for="senha">Senha</label>
+                        <div class="input-border">
+                            <img src="images/lock.svg" alt="cadeado, um retangulo com um meio circulo encima dele para se assemelhar a um cadeado">
+                            <img src="images/lock-focus.svg" alt="cadeado, um retangulo com um meio circulo encima dele para se assemelhar a um cadeado na cor amarela">
+                            <input type="password" name="password" id="password">
+                            <img onclick="ShowPassword()" src="images/eye.svg" alt="olho">
+                            <div class="line"></div>
+                            <small>Preencha</small>
+                        </div>
+                    </div>
+                    <div class="check-Forget">
+                        <div class="input-check">
+                            <input type="checkbox" name="check" id="check">
+                            <span class="checkmark"></span>
+                            <label for="check">Lembre-me</label>
+                        </div>
+                        <p>
+                            <span onclick="ShowForget()">Esqueci Senha</span>
+                        </p>
+                    </div>
+                    <button type="submit">Entrar</button>
+                    <p >Não tem uma conta ? <span onclick="ShowCreate()">Registre-se</span> </p>
+                </form>
+            </div>
+
+            <form class="ForgetPass">
+                <h2>Recupere sua Conta aqui</h2>
+                <div class="forget">
+                    <label for="forget-input">E-mail</label>
+                    <div class="input-border">
+                        <img src="images/mail.svg" alt="email um icone de uma carta, retangulo com uma meio triangulo no meio">
+                        <img src="images/mail-focus.svg" alt="email um icone de uma carta, retangulo com uma meio triangulo no meio na color amarela">
+                        <input type="email" name="forget-input" id="forget-input">
+                        <small>Preencha</small>
+
+                    </div>
+                </div>
+                <p onclick="Removeform()">Fazer Login</p>
+                <button>Recuperar</button>
+            </form>
+            <form action="" id="CreateAccount">
+                <h2>Registre-se Aqui</h2>
+                <div class="GroupNames">
+                    <div class="GroupPut">
+                        <label for="name">Name</label>
+                        <div class="input-border">
+                            <input type="text" name="name" id="name">
+                            <small>Preencha</small>
+                        </div>
+                    </div>
+                    <div class="GroupPut">
+                        <label for="sobrenome">Sobrenome</label>
+                        <div class="input-border">
+                            <input type="text" name="sobrenome" id="sobrenome">
+                            <small>Preencha</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="GroupPutEmail">
+                    <label for="email">Email</label>
+                    <div class="input-border">
+                        <img src="images/mail.svg" alt="email um icone de uma carta, retangulo com uma meio triangulo no meio">
+                        <img src="images/mail-focus.svg" alt="email um icone de uma carta, retangulo com uma meio triangulo no meio na color amarela">
+                        <input type="email" name="email" id="emailC">
+                        <small>Preencha</small>
+                    </div>
+                </div>
+                <div class="GroupPutSenha">
+                    <label for="password">Senha</label>
+                    <div class="input-border">
+                        <img src="images/lock.svg" alt="cadeado, um retangulo com um meio circulo encima dele para se assemelhar a um cadeado">
+                            <img src="images/lock-focus.svg" alt="cadeado, um retangulo com um meio circulo encima dele para se assemelhar a um cadeado na cor amarela">
+                        <input type="password" name="passwordCr" id="passwordCr">
+                        <img onclick="ShowPasswordCr()" src="images/eye.svg" alt="olhos">
+                        <div class="line"></div>
+                        <small>Preencha</small>
+                    </div>
+                </div>
+                <div class="GroupPutSenhac">
+                    <label for="passwordC">Confirma senha</label>
+                    <div class="input-border">
+                        <img src="images/lock.svg" alt="cadeado, um retangulo com um meio circulo encima dele para se assemelhar a um cadeado">
+                        <img src="images/lock-focus.svg" alt="cadeado, um retangulo com um meio circulo encima dele para se assemelhar a um cadeado na cor amarela">
+                        <input type="password" name="passwordC" id="passwordC">
+                        <img onclick="ShowPasswordC()" src="images/eye.svg" alt="olhos">
+                        <div class="line"></div>
+                        <small>Preencha</small>
+                    </div>
+                </div>
+                <p onclick="Removeform()">Fazer Login</p>
+                <button type="submit">Criar Conta</button>
+            </form>
+
+        </div>
+        <div class="right">
+
+        </div>
 
 
-    <main class="socialTree">
-        <figure
-        ><img src="img/perfil.jpeg" alt="imagem de perfil">
-        </figure>
-        <h1>Lucas Oliveira</h1>
-        <h2>Desenvolvedor Web</h2>
-        <ul id="lista-ul">
-            <li>
-                
-                <a href=""><i class="fab fa-facebook"></i> Facebook</a>  
-            </li>
-            <li>
-                
-                <a target="_blank" href=" https://api.whatsapp.com/send?phone=971447401 "><i class="fab fa-whatsapp"></i> Whatsapp</a>  
-            </li>
-            <li>
-                <a target="_blank" href="">
-                <i class="fab fa-instagram"></i>
-                 Instagram </a> 
-            </li>
-            <li>
-                <a target="_blank" href=" https://www.linkedin.com/in/lucas-oliveira-369a4022a/ ">
-                    <i class="fab fa-linkedin"></i> 
-                    LinkId
-                </a> 
-            </li>
+    </section>
 
-            <li>
-                <a target="_blank" href="https://github.com/LuskarDev">
-                    <i class="fa-brands fa-github"></i>
-                    Github
-                </a> 
-            </li>
-            
-        </ul>
-        <button id="showMore" onclick="ShowMore()">
-            <p>Ver + 1 
-            </p>
-             <img src="img/down-arrow (cópia).png" >
-        </button>
-    </main>
+<script src="https://unpkg.com/scrollreveal"></script>
+    
+<script src="main.js"></script>
+<script src="senha.js"></script>
 
-    <script src="https://kit.fontawesome.com/51bc08e9f3.js" crossorigin="anonymous"></script>    
-    <script src="main.js"></script>
+<script>
+
+var slideLeft = {
+    distance: '150%',
+    origin: 'left',
+    reset: true,
+    easing: 'ease-in' 
+};
+
+ScrollReveal().reveal('.left', slideLeft);
+
+var slideBottom = {
+    distance: '150%',
+    origin: 'bottom',
+    reset: true,
+    
+};
+
+ScrollReveal().reveal('.right', slideBottom);
+
+</script>
+
 </body>
 </html>
