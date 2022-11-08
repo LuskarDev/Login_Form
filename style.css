@@ -498,7 +498,7 @@ section {
 /* LADO DIREITO */
 
 .right {
-    background-image: url(/Login\ Form\ CSS/images/side-image-2x.jpg);
+    background-image: url(/images/side-image-2x.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
