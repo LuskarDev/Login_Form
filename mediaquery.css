@@ -1,0 +1,30 @@
+@media screen and (max-width: 1167px) {
+    section {
+        height: 120vh;
+    }
+
+    .left #CreateAccount .GroupNames .GroupPutLast,
+    .left #CreateAccount .GroupNames .GroupPutname{
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 938px) {
+    section {
+        grid-template-columns: 65% 35%;
+    }  
+
+    .left #CreateAccount .GroupNames {
+        flex-wrap: wrap;
+        }
+}
+
+@media screen and (max-width: 654px) {
+    section {
+        grid-template-columns: 1fr;
+    }  
+
+    .right{
+        display: none;
+    }
+}
