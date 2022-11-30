@@ -258,11 +258,14 @@ section {
 
 .left .form .title .content-title {
     display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--font-Roboto);
 }
 
 .left .form .title .content-title h1 {
-    margin: 5px 0;
+    margin: 10px 0px;
+    width: 100%;
     margin-left: 5px;
 }
 
@@ -498,7 +501,7 @@ section {
 /* LADO DIREITO */
 
 .right {
-    background-image: url(./images/side-image-2x.jpg);
+    background-image: url(/Login\ Form\ CSS/images/side-image-2x.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
